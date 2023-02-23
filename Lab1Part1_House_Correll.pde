@@ -1,0 +1,63 @@
+//setup
+background(#B4D1FF);
+strokeWeight(3);
+size(500,600);
+//ground
+fill(#67D867);
+rect(0,500,500,100);
+//house
+fill(#677FFF);
+rect(100,250,300,300);
+//door
+fill(#E86567);
+rect(200,400,100,150);
+//roof
+fill(#F7B9F6);
+triangle(50,250,450,250,250,75);
+//windows and doorknob
+fill(#FBFF8B);
+circle(175,325,75);
+circle(325,325,75);
+fill(#9B9448);
+circle(220,475,20);
+fill(#F7B9F6);
+//roof shapes
+arc(250,215,120,70,0,PI);
+fill(#2E9D9A);
+PShape a;
+a=createShape();
+a.beginShape();
+a.vertex(195,210);
+a.vertex(195,160);
+a.vertex(250,110);
+a.vertex(305,160);
+a.vertex(305,210);
+a.vertex(250,160);
+a.vertex(195,210);
+a.endShape();
+shape(a,0,0);
+//sun
+fill(#F6FF00);
+stroke(#F6FF00);
+circle(80,100,75);
+line(20,20,50,63);
+line(65,30,70,55);
+line(100,10,95,55);
+line(140,20,110,60);
+line(160,50,120,80);
+line(150,100,125,100);
+line(120,122,140,130);
+line(110,135,130,165);
+line(90,145,95,160);
+line(70,145,65,170);
+line(50,135,30,175);
+line(35,120,20,135);
+line(35,100,5,100);
+line(35,80,10,65);
+//Adding a fence using a loop
+stroke(0);
+for (int x=0; x<width; x+=50) {
+  fill(#E8B25B);
+  rect(x,475,30,100);
+}
+rect(0,520,width,10);
